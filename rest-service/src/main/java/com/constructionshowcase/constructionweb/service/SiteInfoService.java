@@ -24,4 +24,8 @@ public class SiteInfoService {
         return this.siteInfoRepository.findAll();
     }
 
+    public SiteInfo getSiteInfoDetails(String id) {
+        return this.siteInfoRepository.findById(id).get();
+    }
+
 }

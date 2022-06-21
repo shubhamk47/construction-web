@@ -4,28 +4,34 @@ import java.util.List;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
 
 import com.constructionshowcase.constructionweb.model.SiteInfo;
 import com.constructionshowcase.constructionweb.service.SiteInfoService;
 
-@Controller
+@RestController("/api")
 public class MainRestController {
 
     @Autowired
     SiteInfoService siteInfoService;
-    
+
     @GetMapping(path = "/sites")
-    public List<SiteInfo> getAllSiteDetails(){
+    public List<SiteInfo> getAllSiteDetails() {
         return this.siteInfoService.getAllSiteDetails();
     }
 
     @PostMapping(path = "/save")
-    public Map<String, SiteInfo> saveSiteDetails(@RequestBody SiteInfo siteInfo){
+    public Map<String, SiteInfo> saveSiteDetails(@RequestBody SiteInfo siteInfo) {
         return this.siteInfoService.saveSiteDetails(siteInfo);
+    }
+
+    @GetMapping(path = "/site/{id}")
+    public SiteInfo getSiteInfoDetails(@PathVariable String id){
+        return this.siteInfoService.getSiteInfoDetails(id);
     }
 
 }

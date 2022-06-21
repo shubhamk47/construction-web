@@ -14,7 +14,7 @@ import lombok.NoArgsConstructor;
 public class SiteInfo {
 
     @Id
-    private int id;
+    private String id;
     private String siteName;
     private String templateId;
     private boolean activeFlag;

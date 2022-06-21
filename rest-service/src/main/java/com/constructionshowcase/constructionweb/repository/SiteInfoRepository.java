@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 import com.constructionshowcase.constructionweb.model.SiteInfo;
 
 @Repository
-public interface SiteInfoRepository extends MongoRepository<SiteInfo, Integer> {
+public interface SiteInfoRepository extends MongoRepository<SiteInfo, String> {
 
 }
