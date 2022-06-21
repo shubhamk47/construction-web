@@ -1,0 +1,104 @@
+:root {
+  --bs-primary: #222831;
+  --bs-secondary: #393e46;
+  --bs-info: "#00ADB5";
+  --bs-light: #eeeeee;
+}
+
+.Router {
+  min-height: 100vh;
+}
+
+.Home {
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.OuterContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.InnerContainer {
+  width: 1024px;
+  display: flex;
+  flex-direction: column;
+}
+
+.Card {
+  background-color: var(--bs-primary);
+  border: 1px solid var(--bs-light);
+  padding: 1rem;
+  margin: 1rem;
+  cursor: pointer;
+  h3 {
+    color: var(--bs-light);
+  }
+}
+
+.ProductPage {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.Showcase {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.Showcase2 {
+  background-color: #fbfbfd;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  input {
+    text-align: center;
+    background-color: #fbfbfd;
+    width: 40rem;
+    border: 0;
+  }
+  .ShowcaseTextContainer {
+    margin-top: 0;
+  }
+}
+
+.ShowcaseTextContainer {
+  display: flex;
+  flex-direction: column;
+  margin-top: 8rem;
+  input {
+    text-align: center;
+    width: 40rem;
+    border: 0;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .Showcase2 {
+    flex-direction: column;
+  }
+}
+.SaveButtonContainer {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin: 1rem 0 1rem 0;
+}
+
+.SaveButton {
+  background-color: #0171e2;
+  width: 5rem;
+  height: 2rem;
+  border: 0;
+  color: white;
+  border-radius: 3rem;
+  cursor: pointer;
+}
