@@ -1,5 +1,6 @@
 /* eslint-disable jsx-a11y/alt-text */
 import { useReducer, useRef } from "react";
+import axios from "axios";
 // import { Form } from "antd";
 
 export default function ProductPage() {
@@ -96,19 +97,34 @@ export default function ProductPage() {
   };
   const submitHandler = () => {
     let formData = {
-      title1: state.showcaseTitle1,
-      subTitle1: state.showcaseSubTitle1,
-      smallText1: state.showcaseSmallText1,
-      imgUrl1: state.imgUrl1,
-      title2: state.showcaseTitle2,
-      subTitle2: state.showcaseSubTitle2,
-      smallText2: state.showcaseSmallText2,
-      imgUrl2: state.imgUrl2,
-      title3: state.showcaseTitle3,
-      subTitle3: state.showcaseSubTitle3,
-      smallText3: state.showcaseSmallText3,
-      imgUrl3: state.imgUrl3,
+      siteName: "Test Product 2",
+      templateId: "1",
+      activeFlag: true,
+      textContents: {
+        showcaseTitle1: state.showcaseTitle1,
+        showcaseSubTitle1: state.showcaseSubTitle1,
+        showcaseSmallText1: state.showcaseSmallText1,
+        containerImg1: state.imgUrl1,
+      },
     };
+    // let formData = {
+    //   title1: state.showcaseTitle1,
+    //   subTitle1: state.showcaseSubTitle1,
+    //   smallText1: state.showcaseSmallText1,
+    //   imgUrl1: state.imgUrl1,
+    //   title2: state.showcaseTitle2,
+    //   subTitle2: state.showcaseSubTitle2,
+    //   smallText2: state.showcaseSmallText2,
+    //   imgUrl2: state.imgUrl2,
+    //   title3: state.showcaseTitle3,
+    //   subTitle3: state.showcaseSubTitle3,
+    //   smallText3: state.showcaseSmallText3,
+    //   imgUrl3: state.imgUrl3,
+    // };
+    axios.post("http://localhost:8080/save", formData).then((data) => {
+      console.log(data);
+    });
+
     console.log(formData);
   };
 
