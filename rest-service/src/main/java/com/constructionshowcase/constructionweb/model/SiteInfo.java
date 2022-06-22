@@ -1,6 +1,7 @@
 package com.constructionshowcase.constructionweb.model;
 
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -18,7 +19,6 @@ public class SiteInfo {
     private String siteName;
     private String templateId;
     private boolean activeFlag;
-    private List<TextContent> textContents;
-    private List<MediaContent> mediaContents;
+    private Map<String, String> textContents;
 
 }
