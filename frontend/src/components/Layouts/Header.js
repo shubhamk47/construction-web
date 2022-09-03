@@ -7,12 +7,7 @@ import Drawer from "@mui/material/Drawer";
 import CloseIcon from "@mui/icons-material/Close";
 import Divider from "@mui/material/Divider";
 import ListItemButton from "@mui/material/ListItemButton";
-import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
-import FolderIcon from "@mui/icons-material/Folder";
-import ImageIcon from "@mui/icons-material/Image";
-import DescriptionIcon from "@mui/icons-material/Description";
-import Button from "@mui/material/Button";
 import Logo from "../../assets/images/logo_transparent.png";
 
 export default function Header(props) {
@@ -30,11 +25,13 @@ export default function Header(props) {
   return (
     <div
       className={
-        props.scroll ? "container1 sticky bg-black" : "container1 sticky"
+        props.scroll
+          ? "container1 sticky bg-black"
+          : "container1 sticky bg-black-tr"
       }
     >
       <div className="container2">
-        <div className="Header ">
+        <div className="Header">
           <img
             src={Logo}
             style={{
@@ -90,27 +87,17 @@ export default function Header(props) {
               </IconButton>
               <Divider sx={{ mb: 2 }} />
               <Box sx={{ mb: 2 }}>
-                <ListItemButton>
-                  <ListItemIcon>
-                    <ImageIcon sx={{ color: "primary.main" }} />
-                  </ListItemIcon>
-                  <ListItemText primary="Pictures" />
+                <ListItemButton onClick={props.executeScrollOurWork}>
+                  <ListItemText primary="Our Work" />
                 </ListItemButton>
-
-                <ListItemButton>
-                  <ListItemIcon>
-                    <DescriptionIcon sx={{ color: "primary.main" }} />
-                  </ListItemIcon>
-                  <ListItemText primary="Documents" />
+                <ListItemButton onClick={props.executeScrollAboutUs}>
+                  <ListItemText primary="About Us" />
                 </ListItemButton>
-                <ListItemButton>
-                  <ListItemIcon>
-                    <FolderIcon sx={{ color: "primary.main" }} />
-                  </ListItemIcon>
-                  <ListItemText primary="Other" />
+                <ListItemButton onClick={props.executeScrollContactUs}>
+                  <ListItemText primary="Contact Us" />
                 </ListItemButton>
               </Box>
-              <Box
+              {/* <Box
                 sx={{
                   display: "flex",
                   justifyContent: "center",
@@ -126,7 +113,7 @@ export default function Header(props) {
                 <Button variant="outlined" sx={{ m: 1, width: 0.5 }}>
                   Login
                 </Button>
-              </Box>
+              </Box> */}
             </Box>
           </Drawer>
         </div>

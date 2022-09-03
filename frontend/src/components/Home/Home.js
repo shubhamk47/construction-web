@@ -22,9 +22,18 @@ export default function Home() {
   const aboutUsScroll = useRef(null);
   const contactUsScroll = useRef(null);
 
-  const executeScrollOurWork = () => ourWorkScroll.current.scrollIntoView();
-  const executeScrollAboutUs = () => aboutUsScroll.current.scrollIntoView();
-  const executeScrollContactUs = () => contactUsScroll.current.scrollIntoView();
+  const executeScrollOurWork = () => {
+    document.title = "Construction . Our Work";
+    ourWorkScroll.current.scrollIntoView();
+  };
+  const executeScrollAboutUs = () => {
+    document.title = "Construction . About Us";
+    aboutUsScroll.current.scrollIntoView();
+  };
+  const executeScrollContactUs = () => {
+    document.title = "Construction . Contact Us";
+    contactUsScroll.current.scrollIntoView();
+  };
 
   // const [showcase, setShowcase] = useState();
 
