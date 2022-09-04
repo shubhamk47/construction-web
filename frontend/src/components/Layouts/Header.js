@@ -9,8 +9,11 @@ import Divider from "@mui/material/Divider";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemText from "@mui/material/ListItemText";
 import Logo from "../../assets/images/logo_transparent.png";
+import { useLocation, useNavigate } from "react-router-dom";
 
 export default function Header(props) {
+  const location = useLocation();
+  const navigate = useNavigate();
   const [open, setState] = useState(false);
   const toggleDrawer = (open) => (event) => {
     if (
@@ -25,7 +28,9 @@ export default function Header(props) {
   return (
     <div
       className={
-        props.scroll
+        location.pathname === "/gallery"
+          ? "container1 sticky bg-black"
+          : props.scroll
           ? "container1 sticky bg-black"
           : "container1 sticky bg-black-tr"
       }
@@ -38,22 +43,24 @@ export default function Header(props) {
               cursor: "pointer",
             }}
             onClick={() => {
-              window.scrollTo(0, 0);
+              location.pathname === "/" ? window.scrollTo(0, 0) : navigate("/");
               document.title = "Construction";
             }}
           />
           <div className="Header-Menu">
-            <div className="Header-Menu-Desktop">
-              <p onClick={props.executeScrollOurWork} className="Menu-Item">
-                Our Work
-              </p>
-              <p onClick={props.executeScrollAboutUs} className="Menu-Item">
-                About Us
-              </p>
-              <p onClick={props.executeScrollContactUs} className="Menu-Item">
-                Contact Us
-              </p>
-            </div>
+            {location.pathname === "/" && (
+              <div className="Header-Menu-Desktop">
+                <p onClick={props.executeScrollOurWork} className="Menu-Item">
+                  Our Work
+                </p>
+                <p onClick={props.executeScrollAboutUs} className="Menu-Item">
+                  About Us
+                </p>
+                <p onClick={props.executeScrollContactUs} className="Menu-Item">
+                  Contact Us
+                </p>
+              </div>
+            )}
             {/* dummy containers  */}
             <div className="Header-Menu-Desktop"></div>
             <div className="Header-Menu-Mobile"></div>

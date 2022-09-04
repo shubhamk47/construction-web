@@ -14,6 +14,7 @@ import OurWork from "../Pages/OurWork";
 export default function Home() {
   const [scroll, setScroll] = useState(false);
   useEffect(() => {
+    window.scrollTo(0, 0);
     window.addEventListener("scroll", () => {
       setScroll(window.scrollY > 50);
     });
