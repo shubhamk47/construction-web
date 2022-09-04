@@ -27,17 +27,17 @@ export default function ProductPage() {
       showcaseSubTitle1: "Oh. So. Pro.",
       showcaseSmallText1: "From $41.62/mo. for 24 mo. or $999 before trade‑in",
       imgUrl1:
-        "https://www.apple.com/v/iphone/home/bh/images/overview/hero/iphone_13_pro_hero__gqclakbze4a6_medium_2x.png",
+        "https://www.apple.com/v/home/aq/images/heroes/iphone-13-pro/hero_iphone13pro_avail__iy77cld0zwii_mediumtall_2x.jpg",
       showcaseTitle2: "iPhone 13 Pro",
       showcaseSubTitle2: "Your new superpower.",
       showcaseSmallText2: "From $29.12/mo. for 24 mo. or $699 before trade‑in",
       imgUrl2:
-        "https://www.apple.com/v/iphone/home/bh/images/overview/hero/iphone_13_hero__c7g09yt0mjcm_medium_2x.png",
+        "https://www.apple.com/v/home/aq/images/heroes/iphone-13/hero_iphone13_avail__gnqqkzuai6um_mediumtall_2x.jpg",
       showcaseTitle3: "iPhone 13 SE",
       showcaseSubTitle3: "Love the power. Love the price.",
       showcaseSmallText3: "From $17.87/mo. for 24 mo. or $429 before trade‑in",
       imgUrl3:
-        "https://www.apple.com/v/iphone/home/bh/images/overview/hero/iphone_se_hero__gd586pazxqqa_medium_2x.jpg",
+        "https://www.apple.com/v/iphone/home/bi/images/overview/hero/iphone_se_hero__gd586pazxqqa_large.jpg",
     }
   );
 

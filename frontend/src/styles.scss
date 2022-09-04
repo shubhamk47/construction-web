@@ -199,6 +199,10 @@ nav {
 .ProductPage {
   width: 100%;
   min-height: 100vh;
+  background-color: #fbfbfd;
+  input {
+    background-color: #fbfbfd !important;
+  }
 }
 
 .Showcase {
