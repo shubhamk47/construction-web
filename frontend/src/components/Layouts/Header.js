@@ -37,7 +37,10 @@ export default function Header(props) {
             style={{
               cursor: "pointer",
             }}
-            onClick={() => window.scrollTo(0, 0)}
+            onClick={() => {
+              window.scrollTo(0, 0);
+              document.title = "Construction";
+            }}
           />
           <div className="Header-Menu">
             <div className="Header-Menu-Desktop">

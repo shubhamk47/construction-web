@@ -23,15 +23,12 @@ export default function Home() {
   const contactUsScroll = useRef(null);
 
   const executeScrollOurWork = () => {
-    document.title = "Construction . Our Work";
     ourWorkScroll.current.scrollIntoView();
   };
   const executeScrollAboutUs = () => {
-    document.title = "Construction . About Us";
     aboutUsScroll.current.scrollIntoView();
   };
   const executeScrollContactUs = () => {
-    document.title = "Construction . Contact Us";
     contactUsScroll.current.scrollIntoView();
   };
 
@@ -104,7 +101,7 @@ export default function Home() {
         executeScrollContactUs={executeScrollContactUs}
         scroll={scroll}
       />
-      <LandingPage />
+      <LandingPage executeScrollContactUs={executeScrollContactUs} />
       <OurWork scroll={ourWorkScroll} />
       <AboutUs scroll={aboutUsScroll} />
       <ContactUs scroll={contactUsScroll} />

@@ -16,14 +16,17 @@ export default function OurWork(props) {
       >
         <div>
           <img src={Img1} />
+          <h1>Site 1</h1>
           {/* <p className="legend">Legend 1</p> */}
         </div>
         <div>
           <img src={Img2} />
+          <h1>Site 2</h1>
           {/* <p className="legend">Legend 2</p> */}
         </div>
         <div>
           <img src={Img3} />
+          <h1>Site 3</h1>
           {/* <p className="legend">Legend 3</p> */}
         </div>
       </Carousel>

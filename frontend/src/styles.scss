@@ -14,6 +14,7 @@ html {
 }
 
 .container1 {
+  height: 100%;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -21,6 +22,7 @@ html {
 }
 .container2 {
   width: 80%;
+  height: 100%;
 }
 nav {
   display: flex;
@@ -32,6 +34,13 @@ nav {
 .OurWork {
   min-height: 100vh;
 }
+.AboutUs,
+.ContactUs {
+  height: 100vh;
+  p {
+    font-size: 1.2rem;
+  }
+}
 .LandingPage {
   margin-top: -6vh;
   background-image: url("./assets/images/LandingPage.jpg");
@@ -39,7 +48,85 @@ nav {
   background-repeat: no-repeat;
   background-size: cover;
   box-shadow: inset 0px 15px 50px 20px black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+.LandingPage-Container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.LandingPage-Inside-Container {
+  width: 50%;
+  height: 17rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  P {
+    margin: 0;
+    font-size: 1.3rem;
+    color: #eeeeee;
+    font-weight: 700;
+  }
+  h1 {
+    margin: 0;
+    line-height: 2.6rem;
+    font-weight: 700;
+    font-size: 2.6rem;
+    color: #eeeeee;
+  }
+  button {
+    background-color: #ffb91c;
+    border: 0;
+    padding: 0.8rem 2.2rem 0.8rem 2.2rem;
+    color: #eeeeee;
+    font-weight: 700;
+    cursor: pointer;
+  }
+}
+
+.OurWork {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.AboutUs-Container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  justify-content: space-evenly;
+  h1 {
+    font-size: 3rem;
+  }
+  p {
+    font-size: 1.1rem;
+  }
+  .Input {
+    height: 2.5rem;
+  }
+  .ant-select-selector {
+    height: 2.5rem !important;
+  }
+  button {
+    background-color: #ffb91c;
+    border: 0;
+    padding: 0.8rem 2.2rem 0.8rem 2.2rem;
+    color: #eeeeee;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 2rem;
+  }
+}
+
 .Home {
   min-height: 100vh;
 }
