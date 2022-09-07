@@ -275,3 +275,20 @@ nav {
     background-size: contain;
   }
 }
+
+.Template-Container {
+  height: 100vh;
+  .Template-Container-1 {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: red;
+    .Template-Container-2 {
+      width: 80%;
+      height: 100%;
+      background-color: blue;
+    }
+  }
+}

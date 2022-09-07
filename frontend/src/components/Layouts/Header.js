@@ -26,106 +26,116 @@ export default function Header(props) {
   };
 
   return (
-    <div
-      className={
-        location.pathname === "/gallery"
-          ? "container1 sticky bg-black"
-          : props.scroll
-          ? "container1 sticky bg-black"
-          : "container1 sticky bg-black-tr"
-      }
-    >
-      <div className="container2">
-        <div className="Header">
-          <img
-            src={Logo}
-            style={{
-              cursor: "pointer",
-            }}
-            onClick={() => {
-              location.pathname === "/" ? window.scrollTo(0, 0) : navigate("/");
-              document.title = "Construction";
-            }}
-          />
-          <div className="Header-Menu">
-            {location.pathname === "/" && (
-              <div className="Header-Menu-Desktop">
-                <p onClick={props.executeScrollOurWork} className="Menu-Item">
-                  Our Work
-                </p>
-                <p onClick={props.executeScrollAboutUs} className="Menu-Item">
-                  About Us
-                </p>
-                <p onClick={props.executeScrollContactUs} className="Menu-Item">
-                  Contact Us
-                </p>
+    <div style={{ height: "height: 6vh" }}>
+      <div
+        className={
+          location.pathname === "/"
+            ? props.scroll
+              ? "container1 sticky bg-black"
+              : "container1 sticky bg-black-tr"
+            : "container1 sticky bg-black"
+        }
+      >
+        <div className="container2">
+          <div className="Header">
+            <img
+              src={Logo}
+              style={{
+                cursor: "pointer",
+              }}
+              onClick={() => {
+                location.pathname === "/"
+                  ? window.scrollTo(0, 0)
+                  : navigate("/");
+                document.title = "Construction";
+              }}
+            />
+            <div className="Header-Menu">
+              {location.pathname === "/" && (
+                <div className="Header-Menu-Desktop">
+                  <p onClick={props.executeScrollOurWork} className="Menu-Item">
+                    Our Work
+                  </p>
+                  <p onClick={props.executeScrollAboutUs} className="Menu-Item">
+                    About Us
+                  </p>
+                  <p
+                    onClick={props.executeScrollContactUs}
+                    className="Menu-Item"
+                  >
+                    Contact Us
+                  </p>
+                  <p onClick={() => navigate("/temp1")} className="Menu-Item">
+                    Template 1
+                  </p>
+                </div>
+              )}
+              {/* dummy containers  */}
+              <div className="Header-Menu-Desktop"></div>
+              <div className="Header-Menu-Mobile"></div>
+              <div className="Header-Menu-Mobile">
+                <IconButton
+                  edge="start"
+                  color="inherit"
+                  aria-label="open drawer"
+                  onClick={toggleDrawer(true)}
+                  sx={{
+                    mr: 2,
+                  }}
+                >
+                  <MenuIcon style={{ color: "#EEEEEE" }} />
+                </IconButton>
               </div>
-            )}
-            {/* dummy containers  */}
-            <div className="Header-Menu-Desktop"></div>
-            <div className="Header-Menu-Mobile"></div>
-            <div className="Header-Menu-Mobile">
-              <IconButton
-                edge="start"
-                color="inherit"
-                aria-label="open drawer"
-                onClick={toggleDrawer(true)}
+            </div>
+
+            <Drawer
+              anchor="right"
+              open={open}
+              onClose={toggleDrawer(false)}
+              onOpen={toggleDrawer(true)}
+            >
+              <Box
                 sx={{
-                  mr: 2,
+                  p: 2,
+                  height: 1,
+                  backgroundColor: "#eeeeee",
                 }}
               >
-                <MenuIcon style={{ color: "#EEEEEE" }} />
-              </IconButton>
-            </div>
-          </div>
-
-          <Drawer
-            anchor="right"
-            open={open}
-            onClose={toggleDrawer(false)}
-            onOpen={toggleDrawer(true)}
-          >
-            <Box
+                <IconButton sx={{ mb: 2 }}>
+                  <CloseIcon onClick={toggleDrawer(false)} />
+                </IconButton>
+                <Divider sx={{ mb: 2 }} />
+                <Box sx={{ mb: 2 }}>
+                  <ListItemButton onClick={props.executeScrollOurWork}>
+                    <ListItemText primary="Our Work" />
+                  </ListItemButton>
+                  <ListItemButton onClick={props.executeScrollAboutUs}>
+                    <ListItemText primary="About Us" />
+                  </ListItemButton>
+                  <ListItemButton onClick={props.executeScrollContactUs}>
+                    <ListItemText primary="Contact Us" />
+                  </ListItemButton>
+                </Box>
+                {/* <Box
               sx={{
-                p: 2,
-                height: 1,
-                backgroundColor: "#eeeeee",
+                display: "flex",
+                justifyContent: "center",
+                position: "absolute",
+                bottom: "0",
+                left: "50%",
+                transform: "translate(-50%, 0)",
               }}
             >
-              <IconButton sx={{ mb: 2 }}>
-                <CloseIcon onClick={toggleDrawer(false)} />
-              </IconButton>
-              <Divider sx={{ mb: 2 }} />
-              <Box sx={{ mb: 2 }}>
-                <ListItemButton onClick={props.executeScrollOurWork}>
-                  <ListItemText primary="Our Work" />
-                </ListItemButton>
-                <ListItemButton onClick={props.executeScrollAboutUs}>
-                  <ListItemText primary="About Us" />
-                </ListItemButton>
-                <ListItemButton onClick={props.executeScrollContactUs}>
-                  <ListItemText primary="Contact Us" />
-                </ListItemButton>
+              <Button variant="contained" sx={{ m: 1, width: 0.5 }}>
+                Register
+              </Button>
+              <Button variant="outlined" sx={{ m: 1, width: 0.5 }}>
+                Login
+              </Button>
+            </Box> */}
               </Box>
-              {/* <Box
-                sx={{
-                  display: "flex",
-                  justifyContent: "center",
-                  position: "absolute",
-                  bottom: "0",
-                  left: "50%",
-                  transform: "translate(-50%, 0)",
-                }}
-              >
-                <Button variant="contained" sx={{ m: 1, width: 0.5 }}>
-                  Register
-                </Button>
-                <Button variant="outlined" sx={{ m: 1, width: 0.5 }}>
-                  Login
-                </Button>
-              </Box> */}
-            </Box>
-          </Drawer>
+            </Drawer>
+          </div>
         </div>
       </div>
     </div>
