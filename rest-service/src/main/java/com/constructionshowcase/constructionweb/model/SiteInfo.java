@@ -1,6 +1,5 @@
 package com.constructionshowcase.constructionweb.model;
 
-import java.util.List;
 import java.util.Map;
 
 import org.springframework.data.annotation.Id;
@@ -19,6 +18,8 @@ public class SiteInfo {
     private String siteName;
     private String templateId;
     private boolean activeFlag;
+    private boolean isComplete = false;
     private Map<String, String> textContents;
+    //private Map<String, String> imageContents;
 
 }

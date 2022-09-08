@@ -36,4 +36,9 @@ public class MainRestController {
         return this.siteInfoService.getSiteInfoDetails(id);
     }
 
+    @GetMapping(path = "/sites/{status}")
+    public List<SiteInfo> getSitesByStatus(@PathVariable String status){
+        return this.siteInfoService.getSitesByStatus(status);
+    }
+
 }

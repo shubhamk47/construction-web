@@ -1,7 +1,5 @@
 package com.constructionshowcase.constructionweb.model;
 
-import org.bson.types.Binary;
-
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
