@@ -1,5 +1,5 @@
 :root {
-  --bs-primary: #222831;
+  --bs-primary: #2c3333;
   --bs-secondary: #393e46;
   --bs-info: "#00ADB5";
   --bs-light: #eeeeee;
@@ -7,7 +7,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 html {
   scroll-behavior: smooth;
-  font-family: "Poppins", sans-serif;
+  font-family: "Poppins", sans-serif !important;
 }
 .Router {
   min-height: 100vh;
@@ -71,7 +71,7 @@ nav {
   P {
     margin: 0;
     font-size: 1.3rem;
-    color: #eeeeee;
+    color: var(--bs-light);
     font-weight: 700;
   }
   h1 {
@@ -79,13 +79,13 @@ nav {
     line-height: 2.6rem;
     font-weight: 700;
     font-size: 2.6rem;
-    color: #eeeeee;
+    color: var(--bs-light);
   }
   button {
     background-color: #ffb91c;
     border: 0;
     padding: 0.8rem 2.2rem 0.8rem 2.2rem;
-    color: #eeeeee;
+    color: var(--bs-light);
     font-weight: 700;
     cursor: pointer;
   }
@@ -120,7 +120,7 @@ nav {
     background-color: #ffb91c;
     border: 0;
     padding: 0.8rem 2.2rem 0.8rem 2.2rem;
-    color: #eeeeee;
+    color: var(--bs-light);
     font-weight: 700;
     cursor: pointer;
     margin-top: 2rem;
@@ -131,7 +131,7 @@ nav {
   min-height: 100vh;
 }
 .bg-black {
-  background-color: rgb(0, 0, 0);
+  background-color: var(--bs-primary);
   transition: 0.5s;
 }
 
@@ -147,7 +147,7 @@ nav {
   height: 6vh;
   .HeaderLogo {
     font-size: 1.5rem;
-    color: white;
+    color: var(--bs-light);
   }
   .Header-Menu {
     display: flex;
@@ -159,7 +159,7 @@ nav {
       gap: 3rem;
       .Menu-Item {
         margin: 0;
-        color: #eeeeee;
+        color: var(--bs-light);
         font-size: 1.3rem;
         cursor: pointer;
       }
@@ -175,62 +175,62 @@ nav {
   z-index: 99;
 }
 
-.OuterContainer {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-.InnerContainer {
-  width: 1024px;
-  display: flex;
-  flex-direction: column;
-}
+// .OuterContainer {
+//   width: 100%;
+//   display: flex;
+//   justify-content: center;
+// }
+// .InnerContainer {
+//   width: 1024px;
+//   display: flex;
+//   flex-direction: column;
+// }
 
-.Card {
-  border: 1px solid black;
-  padding: 1rem;
-  margin: 1rem;
-  cursor: pointer;
-  h3 {
-    color: black;
-  }
-}
+// .Card {
+//   border: 1px solid black;
+//   padding: 1rem;
+//   margin: 1rem;
+//   cursor: pointer;
+//   h3 {
+//     color: black;
+//   }
+// }
 
-.ProductPage {
-  width: 100%;
-  min-height: 100vh;
-  background-color: #fbfbfd;
-  input {
-    background-color: #fbfbfd !important;
-  }
-}
+// .ProductPage {
+//   width: 100%;
+//   min-height: 100vh;
+//   background-color: #fbfbfd;
+//   input {
+//     background-color: #fbfbfd !important;
+//   }
+// }
 
-.Showcase {
-  width: 100%;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-}
+// .Showcase {
+//   width: 100%;
+//   min-height: 100vh;
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   justify-content: space-between;
+// }
 
-.Showcase2 {
-  background-color: #fbfbfd;
-  width: 100%;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  input {
-    text-align: center;
-    background-color: #fbfbfd;
-    width: 40rem;
-    border: 0;
-  }
-  .ShowcaseTextContainer {
-    margin-top: 0;
-  }
-}
+// .Showcase2 {
+//   background-color: #fbfbfd;
+//   width: 100%;
+//   min-height: 100vh;
+//   display: flex;
+//   align-items: center;
+//   justify-content: space-between;
+//   input {
+//     text-align: center;
+//     background-color: #fbfbfd;
+//     width: 40rem;
+//     border: 0;
+//   }
+//   .ShowcaseTextContainer {
+//     margin-top: 0;
+//   }
+// }
 
 .ShowcaseTextContainer {
   display: flex;
@@ -259,7 +259,7 @@ nav {
   width: 5rem;
   height: 2rem;
   border: 0;
-  color: white;
+  color: var(--bs-light);
   border-radius: 3rem;
   cursor: pointer;
 }
@@ -277,18 +277,22 @@ nav {
 }
 
 .Template-Container {
-  height: 100vh;
+  background-color: #f5f7fa;
+  min-height: 100vh;
   .Template-Container-1 {
     height: 100%;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: red;
     .Template-Container-2 {
       width: 80%;
       height: 100%;
-      background-color: blue;
     }
+  }
+  .Template-Title-Container {
+    width: 100%;
+    padding: 1rem 10% 1rem 10%;
+    background-color: #ffffff;
   }
 }
