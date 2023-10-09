@@ -43,4 +43,9 @@ public class MainRestController {
         return this.siteInfoService.getSitesByStatus(status);
     }
 
+    @GetMapping(path = "/test")
+    public String test(){
+        return "Hello World";
+    }
+
 }
